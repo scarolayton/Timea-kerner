@@ -28,6 +28,7 @@ header {
 }
 header nav {
   width: 50%;
+  margin: 0;
 }
 header nav ul {
   display: flex;
@@ -35,7 +36,8 @@ header nav ul {
   height: 100%;
   justify-content: flex-end;
   align-items: center;
-  /* margin-right: 20px; */
+  padding: 0;
+  margin: 0;
 }
 header nav ul li {
   list-style: none;
@@ -44,6 +46,16 @@ header nav ul li {
 
 header nav ul li a {
   font-weight: 300;
+}
+
+.btn-menu, .btn-close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: #151f63;
+  display: none;
+  z-index: 10;
 }
 
 .info {
@@ -92,7 +104,7 @@ header nav ul li a {
 .why-me {
   margin-top: 60px;
   display: flex;
-  height: 700px;
+
 }
 
 .why-me-text {
@@ -129,75 +141,57 @@ header nav ul li a {
   color: #fff;
   font-weight: 100;
   border: solid 1px #151f63;
+  margin-bottom: 20px;
 }
 .why-me-background {
   background-image: url(./img/img.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-attachment: fixed; */
   width: 50%;
 }
 
-.what-do {
-  display: flex;
-  margin-top: 30px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.reasons {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  max-width: 100%;
+  height: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+.h2-reasons{
+  font-weight: 300;
+  font-size: 50px;
+  color:#151f63;
   text-align: center;
 }
 
-.what-do h2 {
+.reason {
+
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 80px;
+}
+.reason i {
   color: #151f63;
-  font-size: 45px;
+  font-size: 30px;
+}
+
+.reason h3{
   font-weight: 300;
-  width: 40%;
+  color: #151f63;
 }
-
-.what-do p {
-  width: 60%;
-  font-size: 18px;
+.reason p {
   font-weight: 300;
-  line-height: 35px;
 }
-
-.what-do a {
-  padding: 10px;
-  border-radius: 20px;
-  background-color: rgb(21, 31, 99);
-  width: 200px;
-  color: #fff;
-  font-weight: 100;
-  border: solid 1px #151f63;
-}
-
-.what-do-img {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 500px;
-  margin: 50px 0 100px;
-}
-
-.what-do-img img {
-  width: 100%;
-  object-fit: cover;
-  height: 100%;
-  transition: 1s;
-}
-
-.what-do-img img:hover {
-  filter: grayscale(100%);
-  cursor: pointer;
-}
-
 .my-students {
   display: flex;
-  height: 850px;
+  height: auto;
 }
 .my-students-img {
   width: 50%;
-  height: 100%;
+  
 }
 .my-students-text {
   width: 50%;
@@ -238,6 +232,7 @@ header nav ul li a {
 
 footer {
   height: 50vh;
+  width: 100%;
   background-color: #151f63;
   color: #fff;
   display: flex;
@@ -280,4 +275,94 @@ footer {
   color: #fff;
   font-size: 25px;
   margin-right: 10px;
+}
+
+@media screen and (max-width:770px) {
+  .why-me {
+    flex-direction: column-reverse;
+  }
+  .why-me-text {
+    width: 100%;
+  }
+  .why-me-background {
+    width: 100%;
+    height: 600px;
+  }
+  .reasons {
+    grid-template-columns: repeat(1,1fr);
+  }
+  .my-students {
+    flex-direction: column;
+  }
+  .my-students-text {
+    width: 100%;
+  }
+  .my-students-img {
+    width: 100%;
+  }
+  footer {
+    justify-content: space-between;
+  }
+  .menu {
+   margin-left: 20px;
+  }
+  .follow {
+  text-align: center;
+  }
+} 
+
+@media screen and (max-width:400px) {
+  .container {
+    width: 100%;
+  }
+   .principal-menu{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #e8e3f8;
+    z-index: 10;
+    justify-content: center;
+    opacity: 0;
+    top: -100vh;
+    transition: 1s;
+    
+  }
+  header nav ul {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 25px;
+    
+  }
+  footer {
+    flex-direction: column;
+    height: 100vh;
+  }
+  .contact, .follow, .menu {
+    width: 100%;
+    text-align: center;
+  }
+  .contact p {
+    width: 100%;
+  }
+  .menu {
+    margin-left: 0;
+  }
+  .h2-reasons {
+    width: 90%;
+    text-align: center;
+    margin: 0;
+  }
+  .btn-menu {
+    display: block;
+    z-index: 1;
+  }
+  .show {
+    display: block;
+    transition: 1s;
+  }
+  .show-menu {
+    opacity: 1;
+    top: 0;
+  }
 }
