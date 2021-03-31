@@ -349,9 +349,10 @@ footer {
     margin-left: 0;
   }
   .h2-reasons {
-    width: 90%;
+    width: 80%;
     text-align: center;
-    margin: 0;
+    margin-left: 40px;
+    font-size: 40px;
   }
   .btn-menu {
     display: block;
@@ -364,5 +365,16 @@ footer {
   .show-menu {
     opacity: 1;
     top: 0;
+  }
+  .info h2 {
+    width: 80%;
+    font-size: 40px;
+  }
+  .why-me-text h2 {
+    width: 80%;
+    font-size: 40px;
+  }
+  .my-students-text h2 {
+    font-size: 40px;
   }
 }
