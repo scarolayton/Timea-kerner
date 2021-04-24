@@ -49,9 +49,12 @@
     flex-direction: column;
   }
   .img-about-me {
-    width: 80%;
+    width: 65%;
   }
   .content p {
     width: 80%;
+  }
+  .img-about-me img {
+    height: 350px;
   }
 }
