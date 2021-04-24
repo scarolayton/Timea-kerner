@@ -22,7 +22,7 @@ header {
 }
 
 .header-tittle {
-  width: 50%;
+  width:50%;
   margin-left: 30px;
   color: #151f63;
 }
@@ -308,6 +308,15 @@ footer {
   }
   .follow {
   text-align: center;
+  }
+  header nav {
+    width: 70%;
+  }
+  .header-tittle {
+    width: 30%;
+  }
+  header nav ul li {
+    margin-right: 10px;
   }
 } 
 

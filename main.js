@@ -14,6 +14,10 @@ ScrollReveal().reveal(".why-me", {delay: 200})
 ScrollReveal().reveal(".my-students", {delay: 200})
 ScrollReveal().reveal(".reason", {delay: 400})
 ScrollReveal().reveal(".h2-reasons", {delay: 200})
+ScrollReveal().reveal(".img-about-me", {delay: 200})
+ScrollReveal().reveal(".item", {delay: 200})
+
+
 
 
 
